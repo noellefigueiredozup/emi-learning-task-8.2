@@ -20,21 +20,34 @@ class AutoresListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         applyTheme()
-        // Do any additional setup after loading the view.
-    
         setupViews()
         carregaAutores()
+        
     }
     
     private func setupViews() {
         tableView.register(TableSectionHeaderView.self, forHeaderFooterViewReuseIdentifier: TableSectionHeaderView.reuseId)
         tableView.sectionHeaderHeight = TableSectionHeaderView.alturaBase
         tableView.sectionHeaderTopPadding = 0
+        createAddButton()
+    }
+    
+    private func createAddButton() {
+        let button = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onClickAddButton))
+        
+        button.tintColor = .white
+        
+        navigationItem.rightBarButtonItem = button
     }
 
     func carregaAutores() {
         guard let autorAPI = autoresAPI else { return }
         self.autores = autorAPI.listaTodos()
+    }
+    
+    @objc func onClickAddButton() {
+        guard let target = storyboard?.instantiateViewController(withIdentifier: "NovoAutor") else { return }
+        navigationController?.present(target, animated: true, completion: nil)
     }
 
 }
