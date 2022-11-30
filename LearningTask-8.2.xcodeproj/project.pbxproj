@@ -24,6 +24,8 @@
 		5840B50C28610B12000FA9FC /* Autor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B50B28610B12000FA9FC /* Autor.swift */; };
 		5840B50F28610B91000FA9FC /* AutoresAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B50E28610B91000FA9FC /* AutoresAPI.swift */; };
 		5840B5132861FEC4000FA9FC /* NovoAutorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B5122861FEC3000FA9FC /* NovoAutorViewController.swift */; };
+		D900A442293789F9000FEA84 /* LivrosDoAutorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D900A441293789F9000FEA84 /* LivrosDoAutorViewController.swift */; };
+		D900A44529378E0E000FEA84 /* LivroDoAutorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D900A44429378E0E000FEA84 /* LivroDoAutorTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		5840B50B28610B12000FA9FC /* Autor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autor.swift; sourceTree = "<group>"; };
 		5840B50E28610B91000FA9FC /* AutoresAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoresAPI.swift; sourceTree = "<group>"; };
 		5840B5122861FEC3000FA9FC /* NovoAutorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovoAutorViewController.swift; sourceTree = "<group>"; };
+		D900A441293789F9000FEA84 /* LivrosDoAutorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivrosDoAutorViewController.swift; sourceTree = "<group>"; };
+		D900A44429378E0E000FEA84 /* LivroDoAutorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivroDoAutorTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,7 @@
 		5840B50328610870000FA9FC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D900A4402937892D000FEA84 /* LivrosDoAutor */,
 				5840B507286109F3000FA9FC /* Autores */,
 				5840B5142862098E000FA9FC /* NovoAutor */,
 			);
@@ -186,6 +191,23 @@
 				5840B5122861FEC3000FA9FC /* NovoAutorViewController.swift */,
 			);
 			path = NovoAutor;
+			sourceTree = "<group>";
+		};
+		D900A4402937892D000FEA84 /* LivrosDoAutor */ = {
+			isa = PBXGroup;
+			children = (
+				D900A44329378DED000FEA84 /* Components */,
+				D900A441293789F9000FEA84 /* LivrosDoAutorViewController.swift */,
+			);
+			path = LivrosDoAutor;
+			sourceTree = "<group>";
+		};
+		D900A44329378DED000FEA84 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D900A44429378E0E000FEA84 /* LivroDoAutorTableViewCell.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +285,10 @@
 				5840B50C28610B12000FA9FC /* Autor.swift in Sources */,
 				583A39E328775515002C6288 /* AutorTableHeaderView.swift in Sources */,
 				583A39DE28775380002C6288 /* ListaDeItensHorizontal.swift in Sources */,
+				D900A442293789F9000FEA84 /* LivrosDoAutorViewController.swift in Sources */,
 				5840B50A28610AEC000FA9FC /* AutorTableViewCell.swift in Sources */,
 				5840B50628610928000FA9FC /* Theme.swift in Sources */,
+				D900A44529378E0E000FEA84 /* LivroDoAutorTableViewCell.swift in Sources */,
 				583A39DB2877535D002C6288 /* Livro.swift in Sources */,
 				5840B4EE28610694000FA9FC /* AppDelegate.swift in Sources */,
 				5840B50F28610B91000FA9FC /* AutoresAPI.swift in Sources */,

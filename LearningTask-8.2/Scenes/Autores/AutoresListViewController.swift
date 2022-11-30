@@ -77,6 +77,11 @@ extension AutoresListViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        guard let destination = storyboard?.instantiateViewController(withIdentifier: "LivrosDoAutor") as? LivrosDoAutorViewController else {
+            fatalError("Não foi possivel instanciar ViewController com identifier LivrosDoAutor como LivrosDoAutorViewController")
+        }
+        
+        navigationController?.pushViewController(destination, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

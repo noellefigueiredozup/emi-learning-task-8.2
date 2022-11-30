@@ -253,7 +253,83 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qNN-F8-CYZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-30" y="819"/>
+            <point key="canvasLocation" x="-30" y="772"/>
+        </scene>
+        <!--Livros Do Autor View Controller-->
+        <scene sceneID="oFb-7I-liA">
+            <objects>
+                <viewController storyboardIdentifier="LivrosDoAutor" id="gmW-j5-hE9" customClass="LivrosDoAutorViewController" customModule="LearningTask_8_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r0X-AZ-n5e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="42" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ajh-KD-ZST">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LivroDoAutorViewCell" id="f1l-tB-B9V" customClass="LivroDoAutorTableViewCell" customModule="LearningTask_8_2" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="49.5" width="374" height="98.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="LivroDoAutorViewCell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f1l-tB-B9V" id="BJY-js-zbl">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="98.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="l10-BO-0oi" userLabel="Stack View Conteudo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="98.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orientação a Objetos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03A-5x-ovm" userLabel="Label Nome">
+                                                            <rect key="frame" x="20" y="12" width="183.5" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M61-LM-VOp" userLabel="ImageView Livro">
+                                                            <rect key="frame" x="203.5" y="12" width="150.5" height="86"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="M61-LM-VOp" secondAttribute="height" multiplier="1.75:1" id="Vce-AC-VRN"/>
+                                                                <constraint firstAttribute="height" constant="86" id="ng9-Ob-6ee"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <directionalEdgeInsets key="directionalLayoutMargins" top="12" leading="20" bottom="0.0" trailing="20"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="l10-BO-0oi" firstAttribute="leading" secondItem="BJY-js-zbl" secondAttribute="leading" id="2Xz-ah-Hqr"/>
+                                                <constraint firstItem="l10-BO-0oi" firstAttribute="top" secondItem="BJY-js-zbl" secondAttribute="top" id="O2f-JN-YWW"/>
+                                                <constraint firstAttribute="trailing" secondItem="l10-BO-0oi" secondAttribute="trailing" id="U7L-Bz-vE1"/>
+                                                <constraint firstAttribute="bottom" secondItem="l10-BO-0oi" secondAttribute="bottom" id="gdh-pk-qZh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="livroImageView" destination="M61-LM-VOp" id="atQ-o1-o3Z"/>
+                                            <outlet property="nomeLabel" destination="03A-5x-ovm" id="yWW-4u-mk3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gmW-j5-hE9" id="2OI-pH-40q"/>
+                                    <outlet property="delegate" destination="gmW-j5-hE9" id="Fg9-bI-m3U"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zY2-cz-2oX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ajh-KD-ZST" firstAttribute="top" secondItem="zY2-cz-2oX" secondAttribute="top" id="39x-P1-oY7"/>
+                            <constraint firstItem="zY2-cz-2oX" firstAttribute="trailing" secondItem="ajh-KD-ZST" secondAttribute="trailing" id="9ap-uf-PmN"/>
+                            <constraint firstItem="zY2-cz-2oX" firstAttribute="bottom" secondItem="ajh-KD-ZST" secondAttribute="bottom" id="gSF-Ne-y2x"/>
+                            <constraint firstItem="ajh-KD-ZST" firstAttribute="leading" secondItem="zY2-cz-2oX" secondAttribute="leading" id="mhp-ME-IZ1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableview" destination="ajh-KD-ZST" id="VwY-24-5HV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Jz-QK-QtB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="691" y="165"/>
         </scene>
     </scenes>
     <resources>
