@@ -11,5 +11,10 @@ class LivroDoAutorTableViewCell: UITableViewCell {
     @IBOutlet weak var nomeLabel: UILabel!
     @IBOutlet weak var livroImageView: UIImageView!
     
+    func setup(para livro: Livro) {
+        nomeLabel.text = livro.titulo
+        livroImageView.image = .init(livro.imagemDeCapaURI, aspectFillIn: livroImageView.frame)
+        
+    }
 
 }

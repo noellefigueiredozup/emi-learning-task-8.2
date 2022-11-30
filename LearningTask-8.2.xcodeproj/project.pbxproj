@@ -196,18 +196,18 @@
 		D900A4402937892D000FEA84 /* LivrosDoAutor */ = {
 			isa = PBXGroup;
 			children = (
-				D900A44329378DED000FEA84 /* Components */,
+				D900A44329378DED000FEA84 /* View */,
 				D900A441293789F9000FEA84 /* LivrosDoAutorViewController.swift */,
 			);
 			path = LivrosDoAutor;
 			sourceTree = "<group>";
 		};
-		D900A44329378DED000FEA84 /* Components */ = {
+		D900A44329378DED000FEA84 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				D900A44429378E0E000FEA84 /* LivroDoAutorTableViewCell.swift */,
 			);
-			path = Components;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

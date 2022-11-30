@@ -81,6 +81,8 @@ extension AutoresListViewController {
             fatalError("Não foi possivel instanciar ViewController com identifier LivrosDoAutor como LivrosDoAutorViewController")
         }
         
+        destination.autor = autores[indexPath.row]
+        destination.livrosApi = LivrosAPI()
         navigationController?.pushViewController(destination, animated: true)
     }
     
